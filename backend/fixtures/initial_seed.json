@@ -1,0 +1,137 @@
+[
+  {
+    "model": "notifications.notificationrecipientconfig",
+    "pk": 1,
+    "fields": {
+      "singleton_id": 1,
+      "primary_admin_email": "admin@easytravels.bh",
+      "secondary_admin_email": "operations@easytravels.bh",
+      "applications_team_email": "applications@easytravels.bh",
+      "consular_department_email": "consular@easytravels.bh",
+      "finance_department_email": "finance@easytravels.bh",
+      "qa_department_email": "qa@easytravels.bh",
+      "notify_assigned_officer": true,
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 1,
+    "fields": {
+      "event": "application_submitted",
+      "label": "Application Submitted",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Initial submission receipt to customer & new dossier intake alert to admin.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 2,
+    "fields": {
+      "event": "application_confirmed",
+      "label": "Application Confirmed",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Payment settled & formal tracking reference issuance notice.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 3,
+    "fields": {
+      "event": "documents_pending",
+      "label": "Documents Pending",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Missing or illegible document upload instructions & queue alert.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 4,
+    "fields": {
+      "event": "ready_for_review",
+      "label": "Ready for Review",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Automated pre-flight OCR passed and awaiting consular officer inspection.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 5,
+    "fields": {
+      "event": "under_review",
+      "label": "Under Review",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Consular adjudicator is actively inspecting passport bio-page and attachments.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 6,
+    "fields": {
+      "event": "additional_information_requested",
+      "label": "Additional Information Requested",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Consular officer requires clarifying itinerary or declaration data.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 7,
+    "fields": {
+      "event": "processing",
+      "label": "Processing with Government",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Dossier successfully lodged with destination ministry/embassy immigration API.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 8,
+    "fields": {
+      "event": "completed",
+      "label": "Completed & Approved",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Official eVisa grant issued, PDF travel authorization ready in wallet.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 9,
+    "fields": {
+      "event": "rejected",
+      "label": "Rejected by Authority",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Immigration refusal notice with formal consular instructions and next steps.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "notifications.notificationtriggerconfig",
+    "pk": 10,
+    "fields": {
+      "event": "cancelled",
+      "label": "Cancelled & Refunded",
+      "customer_enabled": true,
+      "admin_enabled": true,
+      "description": "Application cancellation confirmation and fee settlement statement.",
+      "updated_at": "2026-11-09T08:00:00Z"
+    }
+  }
+]

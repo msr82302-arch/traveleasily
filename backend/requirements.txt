@@ -1,0 +1,30 @@
+# EasyTravels Production & Development Python Dependencies
+# Target Runtime: Python 3.10, 3.11, or 3.12 (Windows 10/11 & Linux)
+
+# Core Django Framework
+Django>=4.2.11,<5.1.0
+djangorestframework>=3.14.0,<3.16.0
+django-cors-headers>=4.3.1
+django-filter>=23.5
+
+# Database Drivers
+psycopg2-binary>=2.9.9
+
+# Asynchronous Task Queue & Cache
+celery>=5.3.6
+redis>=5.0.3
+
+# Environment & Settings
+python-dotenv>=1.0.1
+
+# AI & Transactional Utilities
+google-genai>=2.4.0
+requests>=2.31.0
+
+# WSGI/ASGI Production Servers
+gunicorn>=21.2.0
+uvicorn>=0.28.0
+
+# Testing & Quality Assurance
+pytest>=8.0.2
+pytest-django>=4.8.0

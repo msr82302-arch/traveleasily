@@ -1,0 +1,48 @@
+import { AdminAuditLog } from '../../types/visa';
+
+export const SYNTHETIC_AUDIT_LOGS: AdminAuditLog[] = [
+  {
+    id: 'audit-001',
+    timestamp: new Date(Date.now() - 3600 * 1000 * 2).toISOString(),
+    actorName: 'Tariq Al-Moayyed',
+    actorEmail: 'tariq.moayyed@easytravels.bh',
+    actorRole: 'super_admin',
+    actionType: 'SIGNUP_APPROVED',
+    description: 'Approved staff registration request for Sami Al-Khatib and assigned role: Visa Processing Officer.',
+    targetId: 'reg-req-103',
+    targetType: 'StaffRegistrationRequest',
+  },
+  {
+    id: 'audit-002',
+    timestamp: new Date(Date.now() - 3600 * 1000 * 5).toISOString(),
+    actorName: 'Noor Al-Hashimi',
+    actorEmail: 'noor.hashimi@easytravels.bh',
+    actorRole: 'admin',
+    actionType: 'SIGNUP_REJECTED',
+    description: 'Rejected unverified external contractor registration for Robert Taylor.',
+    targetId: 'reg-req-104',
+    targetType: 'StaffRegistrationRequest',
+  },
+  {
+    id: 'audit-003',
+    timestamp: new Date(Date.now() - 3600 * 1000 * 12).toISOString(),
+    actorName: 'Tariq Al-Moayyed',
+    actorEmail: 'tariq.moayyed@easytravels.bh',
+    actorRole: 'super_admin',
+    actionType: 'PERMISSIONS_UPDATED',
+    description: 'Updated system permissions matrix for role: Application Manager (enabled view_audit_logs).',
+    targetId: 'operations_manager',
+    targetType: 'RoleDefinition',
+  },
+  {
+    id: 'audit-004',
+    timestamp: new Date(Date.now() - 3600 * 1000 * 24).toISOString(),
+    actorName: 'Yousif Mansoor',
+    actorEmail: 'yousif.mansoor@easytravels.bh',
+    actorRole: 'visa_officer',
+    actionType: 'APPLICATION_TRANSITION',
+    description: 'Transitioned dossier ET-BH-2026-98421 to Completed with KSA Visa Grant EV-SA-2026-981048.',
+    targetId: 'ET-BH-2026-98421',
+    targetType: 'VisaApplication',
+  },
+];

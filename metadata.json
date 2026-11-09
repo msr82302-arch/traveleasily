@@ -1,0 +1,6 @@
+{
+  "name": "EasyTravel: Next-Gen Visa Processing Platform",
+  "description": "Borderless travel document ecosystem with edge OCR passport & card scanning, dynamic requirements engine, document wallet, and real-time administrative command center.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

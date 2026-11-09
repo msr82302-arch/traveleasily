@@ -1,0 +1,18 @@
+# Easy Travels (Bahrain) - Document Clearance & Consular Logistics Platform
+
+> Easy Travels is an international visa processing platform and licensed consular logistics provider based in the Kingdom of Bahrain.
+
+## Key Services
+- Electronic Visa (eVisa) processing for 100+ global destinations including Saudi Arabia, Oman, UAE, UK EVW, Schengen area, USA ESTA, and Japan.
+- Client-side WebAssembly OCR for ICAO Doc 9303 compliant Machine Readable Zone (MRZ) passport and national ID card parsing.
+- Real-time client document wallet for auto-saved travel clearances, official PDF visa downloads, and itinerary tracking.
+- Operational administrative command center with side-by-side OCR audit drawers, multi-role access control (RBAC), and automated dual email notifications.
+
+## Physical Headquarters & Contact
+- Address: Near IMC Hospital, Lulu Road, Riffa, Kingdom of Bahrain
+- Phone: +973 33276768
+- Email: concierge@easytravels.bh
+- Commercial Registration: CR #88291-B
+
+## Legal Status
+Easy Travels operates as an independent private visa clearance agency assisting travelers with document preparation and submission to official government immigration portals. Easy Travels is not a diplomatic mission or government embassy.

@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Surface & Background Primitives (Borderless Engine) */
+    --et-surface-base: #f8fafc;
+    --et-surface-card: #ffffff;
+    --et-surface-elevated: #f1f5f9;
+    
+    /* Brand Color Accents */
+    --et-brand-primary: #0f172a;
+    --et-brand-secondary: #0d9488;
+    --et-brand-accent: #d97706;
+    --et-brand-accent-soft: #fef3c7;
+    
+    /* Status Color System */
+    --et-status-draft: #64748b;
+    --et-status-processing: #2563eb;
+    --et-status-approved: #16a34a;
+    --et-status-action-required: #dc2626;
+
+    /* Borderless Elevation Shadows */
+    --et-shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.04);
+    --et-shadow-md: 0 12px 24px -6px rgba(15, 23, 42, 0.06);
+    --et-shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.10);
+    
+    /* Fluid Radius System */
+    --et-radius-card: 20px;
+    --et-radius-button: 9999px;
+    --et-radius-input: 14px;
+    
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Tajawal', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom borderless elevation utilities */
+.borderless-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.borderless-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.09);
+}
+
+.borderless-card-flat {
+  background: #f8fafc;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.03);
+}
+
+.borderless-input {
+  background-color: #f1f5f9;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+
+.borderless-input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Hide scrollbars for clean tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[OPS ALERT] {{ application_id }} - {{ event }}</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0b0f19; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f1f5f9;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #0b0f19; padding: 24px 12px;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table role="presentation" width="100%" style="max-width: 600px; background-color: #0f172a; border-radius: 20px; overflow: hidden; border: 1px solid #1e293b; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);" cellspacing="0" cellpadding="0">
+          <!-- Ops Header Banner -->
+          <tr>
+            <td style="padding: 24px 28px; background: #1e293b; border-bottom: 2px solid #f43f5e;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #f43f5e;">CONSULAR QUEUE DISPATCH ALERT</div>
+                    <h1 style="margin: 6px 0 0 0; font-size: 18px; font-weight: 800; color: #ffffff; font-family: monospace;">{{ application_id }} &bull; {{ event|upper }}</h1>
+                  </td>
+                  <td align="right" valign="top">
+                    <span style="font-size: 10px; font-weight: 800; background: #f43f5e; color: #ffffff; border-radius: 6px; padding: 4px 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+                      {{ speed|upper }}
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body Content -->
+          <tr>
+            <td style="padding: 28px;">
+              <p style="font-size: 13px; line-height: 1.6; margin: 0 0 20px 0; color: #94a3b8;">
+                An automated state transition was logged on the Easy Travels intake pipeline requiring staff attention or compliance logging.
+              </p>
+
+              <!-- Technical Details Grid -->
+              <table role="presentation" width="100%" style="background-color: #1e293b; border-radius: 12px; border: 1px solid #334155; margin-bottom: 24px;" cellspacing="0" cellpadding="12">
+                <tr>
+                  <td width="50%" style="font-size: 11px; color: #94a3b8; border-bottom: 1px solid #334155;">
+                    Destination & Type:<br>
+                    <strong style="color: #ffffff; font-size: 13px;">{{ destination_name }} ({{ visa_category }})</strong>
+                  </td>
+                  <td width="50%" style="font-size: 11px; color: #94a3b8; border-bottom: 1px solid #334155;">
+                    Masked Traveler ID:<br>
+                    <strong style="color: #38bdf8; font-size: 13px; font-family: monospace;">{{ masked_passport }}</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" style="font-size: 11px; color: #94a3b8;">
+                    Event Triggered:<br>
+                    <strong style="color: #34d399; font-size: 12px; font-family: monospace;">{{ event }}</strong>
+                  </td>
+                  <td width="50%" style="font-size: 11px; color: #94a3b8;">
+                    Service Level Tier:<br>
+                    <strong style="color: #fbbf24; font-size: 13px; text-transform: capitalize;">{{ speed }}</strong>
+                  </td>
+                </tr>
+              </table>
+
+              {% if note %}
+              <!-- Internal Staff Note -->
+              <div style="background-color: #1e1b4b; border-left: 4px solid #818cf8; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 24px;">
+                <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: #a5b4fc; margin-bottom: 4px;">Context / Adjudication Reason</div>
+                <div style="font-size: 12px; color: #e0e7ff; line-height: 1.5; font-family: monospace;">{{ note }}</div>
+              </div>
+              {% endif %}
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin: 24px 0 12px 0;">
+                <tr>
+                  <td align="center">
+                    <a href="{{ dashboard_url }}" target="_blank" style="display: inline-block; background-color: #38bdf8; color: #0f172a; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">
+                      Open in Staff Verification Drawer &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer Information -->
+          <tr>
+            <td style="background-color: #0b0f19; padding: 18px 28px; border-top: 1px solid #1e293b; font-size: 10px; line-height: 1.5; color: #64748b;">
+              <p style="margin: 0 0 4px 0; font-family: monospace;">Easy Travels Platform &bull; Automated Staff Relay</p>
+              <p style="margin: 0;">Do not forward unencrypted internal alerts outside the consular organization.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
